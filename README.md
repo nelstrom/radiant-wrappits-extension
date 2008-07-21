@@ -30,3 +30,18 @@ The snippet above could then be called, from any Page or Layout, as follows:
 In this example, the `<r:snippet>` opening tag would correspond to the four opening div tags, and the `</r:snippet>` closing tag would correspond to the four closing div tags.
 
 If you are familiar with Ruby, you may find a resemblance between the pattern used above and Ruby's blocks. A similar approach to this is advocated in [designing helpers and partials in Rails with a block](http://www.pathf.com/blogs/2008/07/pretty-blocks-in-rails-views/).
+
+A few points to note:
+
+* you can still call snippets as a single tag
+* the `<r:yield/>` tag will output nothing if called from a single tag, or from an empty double-tag
+* you can use `<r:yield/>` as many times as you like within a snippet. In each case, it will output the contents of the calling snippet tags.
+
+By installing this extension, you should not see any change in the behaviour of existing snippets in your Radiant project.
+
+Installation
+------------
+
+Just copy this extension to the `/vendor/extensions` directory of your Radiant project, and restart your server. 
+
+You don't need to run any rake tasks.
