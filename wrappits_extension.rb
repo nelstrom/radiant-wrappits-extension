@@ -2,20 +2,15 @@
 # require_dependency 'application'
 
 class WrappitsExtension < Radiant::Extension
-  version "1.0"
-  description "Describe your extension here"
-  url "http://yourwebsite.com/wrappits"
-  
-  # define_routes do |map|
-  #   map.connect 'admin/wrappits/:action', :controller => 'admin/wrappits'
-  # end
+  version "0.1"
+  description "Allows you to create snippets as a double tag, whose contents may be inserted inside a snippet with the <r:yield/> tag."
+  url "http://github.com/nelstrom/radiant-wrappits-extension/"
   
   def activate
-    # admin.tabs.add "Wrappits", "/admin/wrappits", :after => "Layouts", :visibility => [:all]
+    Page.send :include, WrappitTags
   end
   
   def deactivate
-    # admin.tabs.remove "Wrappits"
   end
   
 end
