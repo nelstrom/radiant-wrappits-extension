@@ -1,6 +1,8 @@
 Wrappits
 ========
 
+*This extension was rolled into the Radiant core for version 0.6.8.*
+
 Wrappits are an enhanced version of Radiant's native Snippets. This extension enables you to call a snippet as a double tag: 
 
     <r:snippet name="wrapper">
